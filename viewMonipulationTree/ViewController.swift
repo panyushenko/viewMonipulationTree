@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func AngleSegmentControl(_ sender: UISegmentedControl) {
+        UIView.animate(withDuration: 0.5){
+            let angle = Double(sender.titleForSegment(at: sender.selectedSegmentIndex)!)!
+            self.treeImageView.transform = CGAffineTransform(rotationAngle: CGFloat(angle/180 * .pi))
+        }
     }
     
     @IBAction func hiddenSwitch(_ sender: UISwitch) {
