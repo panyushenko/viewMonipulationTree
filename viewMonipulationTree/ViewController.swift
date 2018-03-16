@@ -26,6 +26,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hiddenSwitch(_ sender: UISwitch) {
+        if sender.isOn == true {
+            self.treeImageView.isHidden = false
+        } else {
+            self.treeImageView.isHidden = true
+        }
     }
     
     @IBAction func hiddenStepper(_ sender: UIStepper) {
