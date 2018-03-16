@@ -36,6 +36,9 @@
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aqq-W7-ho1">
                                         <rect key="frame" x="193" y="19" width="164" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="offsetSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="N8c-oz-fAf"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q2-mb-hRP" userLabel="Size">
                                         <rect key="frame" x="25" y="80" width="33" height="21"/>
@@ -54,6 +57,9 @@
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lb4-JG-Rgf">
                                         <rect key="frame" x="195" y="76" width="94" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sizeStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="zMl-SS-Q44"/>
+                                        </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Angle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6O-Jc-bSY" userLabel="Angle">
                                         <rect key="frame" x="25" y="134" width="44" height="21"/>
@@ -71,6 +77,9 @@
                                             <segment title="60"/>
                                             <segment title="180"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="AngleSegmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="eYc-Qh-0TY"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hidden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE3-ef-s65" userLabel="Hidden">
                                         <rect key="frame" x="25" y="191" width="55" height="21"/>
@@ -82,10 +91,16 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1w1-TG-RgZ">
                                         <rect key="frame" x="195" y="186" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hiddenSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="yDd-Ww-y4i"/>
+                                        </connections>
                                     </switch>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bXn-MO-Fvh">
                                         <rect key="frame" x="261" y="187" width="94" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hiddenStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="ixT-0p-1wf"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,6 +109,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="sizeLabel" destination="R0Y-RX-jOp" id="pEr-hq-xXr"/>
+                        <outlet property="treeImageView" destination="JL5-Y0-6D2" id="NEd-aU-7Pf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
