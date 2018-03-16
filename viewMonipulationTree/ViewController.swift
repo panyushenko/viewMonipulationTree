@@ -16,8 +16,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sizeStepper(_ sender: UIStepper) {
-        self.sizeLabel.text = String(Int(sender.value))
-        
+        let valueScale = sender.value
+        self.sizeLabel.text = String(Int(valueScale))
+//        self.treeImageView.transform = CGAffineTransform(scaleX: CGFloat(0.02 * valueScale), y: CGFloat(0.02 * valueScale))
+//        UIView.animate(withDuration: 1) {
+//
+//        }
+        //self.treeImageView.bounds //= CGFloat(sender.value)
     }
     
     @IBAction func AngleSegmentControl(_ sender: UISegmentedControl) {
@@ -36,6 +41,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hiddenStepper(_ sender: UIStepper) {
+        self.treeImageView.alpha = CGFloat(Float(sender.value))
     }
     
     override func viewDidLoad() {
