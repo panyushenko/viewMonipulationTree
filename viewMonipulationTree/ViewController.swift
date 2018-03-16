@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sizeStepper(_ sender: UIStepper) {
+        self.sizeLabel.text = String(Int(sender.value))
+        
     }
     
     @IBAction func AngleSegmentControl(_ sender: UISegmentedControl) {
