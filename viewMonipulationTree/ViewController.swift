@@ -13,15 +13,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var sizeLabel: UILabel!
     
     @IBAction func offsetSlider(_ sender: UISlider) {
+        let valueSlider = Double(sender.value)
+        self.treeImageView.center = CGPoint(x: 120 + valueSlider, y: 65 + valueSlider)
     }
     
     @IBAction func sizeStepper(_ sender: UIStepper) {
         let valueScale = sender.value
         self.sizeLabel.text = String(Int(valueScale))
-
+        
         let regWeigth = valueScale * 240/50
         let regHeight = valueScale * 130/50
-        self.treeImageView.bounds = CGRect(x: 0, y: 0, width: regWeigth, height: regHeight)
+        
+        self.treeImageView.bounds.size = CGSize(width: regWeigth, height: regHeight)        
     }
     
     @IBAction func AngleSegmentControl(_ sender: UISegmentedControl) {
