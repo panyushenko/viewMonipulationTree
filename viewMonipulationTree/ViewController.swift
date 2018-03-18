@@ -20,14 +20,14 @@ class ViewController: UIViewController {
     @IBAction func sizeStepper(_ sender: UIStepper) {
         let valueScale = sender.value
         self.sizeLabel.text = String(Int(valueScale))
+  
+//        let imageOriginWidth = UIImage(named: "treeImageView")!.size.width  //240
+//        print(imageOriginWidth)
+        let imageOriginHeight = self.treeImageView.image?.size.height
+        let imageOriginWidth = self.treeImageView.image?.size.width    //240
         
-//        let imageOriginWidth = UIImage(named: treeImageView)?.size.width  //240
-//        print(imageOriginWidth!)
-        let imageOriginWidth2 = self.treeImageView.image?.size.width            //240
-        print(imageOriginWidth2!)
-        
-        let regWeigth = valueScale * 240/50
-        let regHeight = valueScale * 130/50
+        let regWeigth = valueScale * Double(imageOriginWidth!) / 200
+        let regHeight = valueScale * Double(imageOriginHeight!) / 200
         
         self.treeImageView.bounds.size = CGSize(width: regWeigth, height: regHeight)        
     }
