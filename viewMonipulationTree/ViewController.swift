@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         let valueScale = sender.value
         self.sizeLabel.text = String(Int(valueScale))
         
+//        let imageOriginWidth = UIImage(named: treeImageView)?.size.width  //240
+//        print(imageOriginWidth!)
+        let imageOriginWidth2 = self.treeImageView.image?.size.width            //240
+        print(imageOriginWidth2!)
+        
         let regWeigth = valueScale * 240/50
         let regHeight = valueScale * 130/50
         
@@ -35,11 +40,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hiddenSwitch(_ sender: UISwitch) {
-        if sender.isOn == true {
-            self.treeImageView.isHidden = false
-        } else {
-            self.treeImageView.isHidden = true
-        }
+        
+        self.treeImageView.isHidden = sender.isOn == true ? false : true
+        //        if sender.isOn == true {
+        //            self.treeImageView.isHidden = false
+        //        } else {
+        //            self.treeImageView.isHidden = true
+        //        }
     }
     
     @IBAction func hiddenStepper(_ sender: UIStepper) {
